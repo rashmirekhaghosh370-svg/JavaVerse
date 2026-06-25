@@ -1,6 +1,8 @@
 import "../../styles/Splash.css";
+import { useNavigate}from "react-router-dom";
 
 function Splash() {
+  const navigate = useNavigate();
   return (
     <div className="splash">
       <div className="overlay">
@@ -11,9 +13,12 @@ function Splash() {
 
   <p>Play • Learn • Code • Conquer</p>
 
-  <button className="start-btn">
-    PRESS START
-  </button>
+  <button
+  className="start-btn"
+  onClick={() => navigate("/character")}
+>
+  PRESS START
+</button>
 </div>
     </div>
   );
