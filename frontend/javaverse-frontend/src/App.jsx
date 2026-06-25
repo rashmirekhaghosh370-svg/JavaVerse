@@ -1,10 +1,7 @@
+import Splash from "./pages/Splash/Splash";
+
 function App() {
-  return (
-    <div>
-      <h1>Welcome to JavaVerse 🚀</h1>
-      <h2>Play • Learn • Code • Conquer</h2>
-    </div>
-  );
+  return <Splash />;
 }
 
 export default App;
