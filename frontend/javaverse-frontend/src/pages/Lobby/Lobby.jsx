@@ -2,6 +2,10 @@ import React from "react";
 import "../../styles/Lobby.css";
 
 function Lobby() {
+  const selectedCharacter = JSON.parse(
+    localStorage.getItem("selectedCharacter")
+  );
+
   return (
     <div className="lobby-page">
 
@@ -10,11 +14,25 @@ function Lobby() {
       <div className="player-card">
 
         <div className="avatar">
-          ⚔️
+          <img
+            src={selectedCharacter?.image}
+            alt={selectedCharacter?.name}
+            className="avatar-img"
+          />
         </div>
 
         <div className="player-info">
-          <h2>Welcome, Java Warrior!</h2>
+
+          <h2>Welcome, {selectedCharacter?.name}</h2>
+
+          <p
+            style={{
+              color: "#00e5ff",
+              fontWeight: "bold",
+            }}
+          >
+            {selectedCharacter?.skill}
+          </p>
 
           <p>⭐ Level : 1</p>
 
@@ -29,11 +47,13 @@ function Lobby() {
               <div className="xp-fill"></div>
             </div>
           </div>
+
         </div>
 
       </div>
 
       <div className="quest-card">
+
         <h2>📜 Daily Quest</h2>
 
         <p>Complete your first Java challenge.</p>
@@ -41,6 +61,7 @@ function Lobby() {
         <p className="reward">
           Reward : +50 XP +20 Coins
         </p>
+
       </div>
 
       <div className="button-section">

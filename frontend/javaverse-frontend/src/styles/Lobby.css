@@ -1,17 +1,27 @@
-/* Background */
+/* ==========================
+   JavaVerse Lobby CSS
+========================== */
 
 body{
     margin:0;
     padding:0;
     font-family:Arial, Helvetica, sans-serif;
+    background:#0f172a;
 }
+
+/* Background */
 
 .lobby-page{
     min-height:100vh;
-    background:linear-gradient(135deg,#090b1a,#12192f);
+    width:100%;
+    padding:30px 20px  120px;
+    box-sizing:border-box;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
     color:white;
-    padding:40px;
-    text-align:center;
 }
 
 /* Title */
@@ -26,11 +36,11 @@ body{
 /* Player Card */
 
 .player-card{
-    width:75%;
-    margin:auto;
+    width:90%;
+    max-width:900px;
+
     display:flex;
     align-items:center;
-    justify-content:flex-start;
     gap:30px;
 
     background:#161b22;
@@ -47,11 +57,19 @@ body{
     height:120px;
     border-radius:50%;
     background:#0d1117;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:60px;
+
     border:3px solid #00e5ff;
+}
+
+.avatar-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
 }
 
 /* Player Info */
@@ -61,8 +79,8 @@ body{
 }
 
 .player-info h2{
-    margin-bottom:15px;
-    color:#ffffff;
+    margin-bottom:10px;
+    color:white;
 }
 
 .player-info p{
@@ -73,7 +91,7 @@ body{
 /* XP */
 
 .xp-box{
-    margin-top:20px;
+    margin-top:15px;
 }
 
 .xp-bar{
@@ -93,18 +111,20 @@ body{
 /* Quest Card */
 
 .quest-card{
-    width:75%;
-    margin:35px auto;
+    width:90%;
+    max-width:900px;
+    margin-top:25px;
     background:#161b22;
-    padding:25px;
     border-radius:20px;
+    padding:25px;
+    text-align:center;
     box-shadow:0 0 15px rgba(88,166,255,.3);
 }
-
 .quest-card h2{
     margin-bottom:15px;
+    color: #ffffff;
+    text-align:center;
 }
-
 .reward{
     color:#00e676;
     font-weight:bold;
@@ -113,25 +133,24 @@ body{
 /* Buttons */
 
 .button-section{
-    width:75%;
-    margin:auto;
+    width:90%;
+    max-width:900px;
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:20px;
+    gap:15px;
+    margin-top:25px;
+    margin-bottom:80px;
 }
-
 .game-btn,
 .logout-btn{
-
     padding:15px;
     font-size:18px;
+    font-weight:bold;
     border:none;
     border-radius:12px;
     cursor:pointer;
     transition:.3s;
-    font-weight:bold;
 }
-
 .game-btn{
     background:#1976d2;
     color:white;
@@ -139,7 +158,7 @@ body{
 
 .game-btn:hover{
     background:#42a5f5;
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 }
 
 .logout-btn{
@@ -149,12 +168,18 @@ body{
 
 .logout-btn:hover{
     background:#ef5350;
-    transform:translateY(-5px);
+    transform:translateY(-4px);
+}
+
+/* Logout Full Width */
+
+.logout-btn{
+    grid-column:1 / -1;
 }
 
 /* Responsive */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .player-card{
     flex-direction:column;
@@ -169,8 +194,16 @@ body{
     grid-template-columns:1fr;
 }
 
+.logout-btn{
+    grid-column:auto;
+}
+
 .xp-bar{
     width:220px;
+}
+
+.lobby-title{
+    font-size:35px;
 }
 
 }
