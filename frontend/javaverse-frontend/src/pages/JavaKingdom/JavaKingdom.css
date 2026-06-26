@@ -1,0 +1,159 @@
+/* Background */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0d1117;
+}
+
+.kingdom-page{
+    min-height:100vh;
+    padding:40px 20px;
+    background:linear-gradient(to bottom,#07121f,#0d1117,#111827);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* Title */
+
+.kingdom-title{
+    color:#ffffff;
+    font-size:50px;
+    margin-bottom:40px;
+    text-shadow:0 0 20px #00e5ff;
+}
+
+/* Story Card */
+
+.story-card{
+    width:90%;
+    max-width:800px;
+    background:#161b22;
+    border:2px solid #00e5ff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,229,255,.35);
+    animation:fadeIn .8s ease;
+}
+
+.story-card h2{
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+.story-card p{
+    color:#ffffff;
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* Button */
+
+.start-btn{
+    margin-top:30px;
+    padding:15px 45px;
+    border:none;
+    border-radius:12px;
+    background:#00b0ff;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.start-btn:hover{
+    background:#00e5ff;
+    transform:scale(1.08);
+    box-shadow:0 0 20px #00e5ff;
+}
+
+/* Status Card */
+
+.status-card{
+    width:90%;
+    max-width:800px;
+    margin-top:35px;
+    background:#161b22;
+    border:2px solid #00e5ff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 0 20px rgba(0,229,255,.3);
+}
+
+.status-card h3{
+    color:white;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.status-card p{
+    color:#FFD54F;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Bars */
+
+.bar{
+    width:100%;
+    height:18px;
+    background:#333;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+.fill{
+    height:100%;
+    border-radius:20px;
+}
+
+.hp{
+    width:100%;
+    background:linear-gradient(to right,#00e676,#69f0ae);
+}
+
+.xp{
+    width:35%;
+    background:linear-gradient(to right,#00b0ff,#00e5ff);
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.kingdom-title{
+    font-size:35px;
+}
+
+.story-card,
+.status-card{
+    padding:20px;
+}
+
+.story-card p{
+    font-size:17px;
+}
+
+.start-btn{
+    width:100%;
+}
+
+}

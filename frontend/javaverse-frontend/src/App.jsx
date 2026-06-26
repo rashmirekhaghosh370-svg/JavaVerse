@@ -3,7 +3,7 @@ import Splash from "./pages/Splash/Splash";
 import Character from "./pages/Character/Character";
 import Lobby from "./pages/Lobby/Lobby";
 import Map from "./pages/Map/Map";
-
+import JavaKingdom from "./pages/JavaKingdom/JavaKingdom";
 function App() {
   return (
     <Routes>
@@ -11,7 +11,7 @@ function App() {
       <Route path="/character" element={<Character />} />
       <Route path="/lobby" element = {<Lobby/>}/>
       <Route path="/map" element = {<Map/>}/>
-
+      <Route path="/java-kingdom" element = {<JavaKingdom/>}/>
     </Routes>
   );
 }
