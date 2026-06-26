@@ -1,10 +1,12 @@
 import React from "react";
 import "../../styles/Lobby.css";
+import {useNavigate} from "react-router-dom"
 
 function Lobby() {
   const selectedCharacter = JSON.parse(
     localStorage.getItem("selectedCharacter")
   );
+  const navigate = useNavigate();
 
   return (
     <div className="lobby-page">
@@ -66,7 +68,9 @@ function Lobby() {
 
       <div className="button-section">
 
-        <button className="game-btn">
+        <button className="game-btn"
+        onClick={() => navigate("/map")}
+        >
           🚀 Start Adventure
         </button>
 
