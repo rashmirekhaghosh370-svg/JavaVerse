@@ -1,7 +1,9 @@
 import React from "react";
 import "./JavaKingdom.css";
+import { useNavigate } from "react-router-dom";
 
 function JavaKingdom() {
+    const navigate = useNavigate();
   return (
     <div className="kingdom-page">
 
@@ -25,8 +27,10 @@ function JavaKingdom() {
           Only a Java Master can defeat them.
         </p>
 
-        <button className="start-btn">
-          🚀 Start Mission
+        <button 
+        className="start-btn"
+        onClick={()=> navigate("/mission")}>
+             🚀 Start Mission
         </button>
 
       </div>

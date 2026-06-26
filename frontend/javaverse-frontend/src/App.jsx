@@ -4,6 +4,7 @@ import Character from "./pages/Character/Character";
 import Lobby from "./pages/Lobby/Lobby";
 import Map from "./pages/Map/Map";
 import JavaKingdom from "./pages/JavaKingdom/JavaKingdom";
+import Mission from "./pages/Mission/Mission"
 function App() {
   return (
     <Routes>
@@ -12,6 +13,7 @@ function App() {
       <Route path="/lobby" element = {<Lobby/>}/>
       <Route path="/map" element = {<Map/>}/>
       <Route path="/java-kingdom" element = {<JavaKingdom/>}/>
+      <Route path="/mission" element = {<Mission/>}/>
     </Routes>
   );
 }
