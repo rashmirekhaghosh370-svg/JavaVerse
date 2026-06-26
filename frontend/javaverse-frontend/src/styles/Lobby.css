@@ -1,0 +1,176 @@
+/* Background */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.lobby-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#090b1a,#12192f);
+    color:white;
+    padding:40px;
+    text-align:center;
+}
+
+/* Title */
+
+.lobby-title{
+    font-size:50px;
+    color:#ffffff;
+    text-shadow:0 0 15px #00e5ff;
+    margin-bottom:40px;
+}
+
+/* Player Card */
+
+.player-card{
+    width:75%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:30px;
+
+    background:#161b22;
+    border-radius:20px;
+    padding:30px;
+
+    box-shadow:0 0 15px rgba(0,229,255,.3);
+}
+
+/* Avatar */
+
+.avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#0d1117;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    border:3px solid #00e5ff;
+}
+
+/* Player Info */
+
+.player-info{
+    text-align:left;
+}
+
+.player-info h2{
+    margin-bottom:15px;
+    color:#ffffff;
+}
+
+.player-info p{
+    margin:8px 0;
+    color:#cfd8dc;
+}
+
+/* XP */
+
+.xp-box{
+    margin-top:20px;
+}
+
+.xp-bar{
+    width:300px;
+    height:15px;
+    background:#333;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.xp-fill{
+    width:40%;
+    height:100%;
+    background:linear-gradient(to right,#00e676,#00b0ff);
+}
+
+/* Quest Card */
+
+.quest-card{
+    width:75%;
+    margin:35px auto;
+    background:#161b22;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(88,166,255,.3);
+}
+
+.quest-card h2{
+    margin-bottom:15px;
+}
+
+.reward{
+    color:#00e676;
+    font-weight:bold;
+}
+
+/* Buttons */
+
+.button-section{
+    width:75%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.game-btn,
+.logout-btn{
+
+    padding:15px;
+    font-size:18px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.game-btn{
+    background:#1976d2;
+    color:white;
+}
+
+.game-btn:hover{
+    background:#42a5f5;
+    transform:translateY(-5px);
+}
+
+.logout-btn{
+    background:#d32f2f;
+    color:white;
+}
+
+.logout-btn:hover{
+    background:#ef5350;
+    transform:translateY(-5px);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.player-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.player-info{
+    text-align:center;
+}
+
+.button-section{
+    grid-template-columns:1fr;
+}
+
+.xp-bar{
+    width:220px;
+}
+
+}

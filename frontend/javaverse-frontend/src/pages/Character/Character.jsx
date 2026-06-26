@@ -4,6 +4,7 @@ import javaWarrior from "../../assets/images/Java Warrior.png";
 import codeWizard from "../../assets/images/Code Wizard.png";
 import aiEngineer from "../../assets/images/AI Engineer.png";
 import springMaster from "../../assets/images/Spring Boot Master.png";
+import {useNavigate} from "react-router-dom";
 
 const characters = [
   {
@@ -41,12 +42,12 @@ function Character() {
               src={item.image}
               alt={item.name}
             />
-
             <h2 className="character-name">{item.name}</h2>
-
             <p className="character-skill">{item.skill}</p>
 
-            <button className="select-btn">
+            <button className="select-btn"
+              onClick={()=> navigate ("/lobby")}
+              >
               Select
             </button>
           </div>
