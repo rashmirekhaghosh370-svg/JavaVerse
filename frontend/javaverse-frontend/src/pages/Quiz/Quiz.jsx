@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Quiz.css";
+import { useNavigate } from "react-router-dom";
 
 function Quiz() {
-
+const navigate = useNavigate();
 const questions = [
-
 {
 question:"Which keyword is used to create a class in Java?",
 options:["function","class","define","new"],
@@ -43,7 +43,7 @@ const handleAnswer = (selected) => {
   if (current < questions.length - 1) {
     setCurrent(current + 1);
   } else {
-    alert("Quiz Completed!");
+    navigate ("/result");
   }
 
 };
