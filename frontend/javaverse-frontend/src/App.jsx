@@ -7,6 +7,7 @@ import JavaKingdom from "./pages/JavaKingdom/JavaKingdom";
 import Mission from "./pages/Mission/Mission"
 import Quiz from "./pages/Quiz/Quiz"
 import Result from "./pages/Result/Result"
+import ReactCity from "./pages/ReactCity/ReactCity"
 function App() {
   return (
     <Routes>
@@ -18,6 +19,7 @@ function App() {
       <Route path="/mission" element = {<Mission/>}/>
       <Route path="/quiz" element = {<Quiz/>}/>
       <Route path="/result" element = {<Result/>}/>
+      <Route path="/react-city" element = {<ReactCity/>}/>
     </Routes>
   );
 }

@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom";
 function Result() {
 
   const navigate = useNavigate();
+  localStorage.setItem("reactUnlocked", "true");
+  localStorage.setItem("xp", "50");
+  localStorage.setItem("coins", "20");
 
   return (
     <div className="result-page">

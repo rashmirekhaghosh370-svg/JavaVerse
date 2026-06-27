@@ -152,45 +152,35 @@ body {
 /* Locked Button */
 
 .locked-btn {
-
   background: #555 !important;
   color: white;
   cursor: not-allowed;
-
   opacity: .8;
-
 }
 
 /* ================= MOBILE ================= */
-
 @media(max-width:768px){
-
 .map-grid{
-
 width:100%;
-
 grid-template-columns:1fr;
-
 gap:25px;
-
 }
-
 .map-card:nth-child(1),
 .map-card:nth-child(2),
 .map-card:nth-child(3),
 .map-card:nth-child(4),
 .map-card:nth-child(5){
-
 grid-column:auto;
-
 justify-self:center;
-
 }
-
 .map-card{
-
 width:280px;
-
 }
-
+.player-status{
+margin-bottom:30px;
+font-size:24px;
+color:gold;
+font-weight:bold;
+text-shadow:0 0 10px gold;
+}
 }

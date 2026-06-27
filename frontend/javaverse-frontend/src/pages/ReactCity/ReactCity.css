@@ -1,0 +1,45 @@
+.react-page{
+    min-height:100vh;
+    background:#0b1120;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.react-card{
+    width:700px;
+    background:#161b22;
+    border:2px solid #00e5ff;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    color:white;
+    box-shadow:0 0 25px cyan;
+}
+
+.react-card h1{
+    font-size:50px;
+    color:#61dafb;
+    margin-bottom:20px;
+}
+
+.react-card h2{
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+.react-card p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.coming-box{
+    background:#0b1120;
+    padding:25px;
+    border-radius:15px;
+}
+
+.coming-box h3{
+    color:gold;
+    margin-bottom:10px;
+}
