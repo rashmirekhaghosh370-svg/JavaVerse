@@ -6,10 +6,10 @@ justify-content:center;
 align-items:center;
 }
 .quiz-page h1{
-    color:#00e5ff;
-    font-size:52px;
-    margin-bottom:30px;
-    text-shadow:0 0 15px cyan;
+ color:#00e5ff;
+ font-size:52px;
+ margin-bottom:30px;
+ text-shadow:0 0 15px cyan;
 }
 .quiz-card{
 width:700px;
@@ -47,7 +47,27 @@ transition:.3s;
 .options button:hover{
 
 background:#0097a7;
-
 transform:scale(1.05);
+}
+.correct{
+    background:#28a745 !important;
+    color:white;
+}
 
+.wrong{
+    background:#dc3545 !important;
+    color:white;
+}
+.score-board{
+    width:220px;
+    margin:20px auto;
+    padding:12px;
+    background:#161b22;
+    border:2px solid gold;
+    border-radius:12px;
+    color:gold;
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;
+    box-shadow:0 0 15px gold;
 }
