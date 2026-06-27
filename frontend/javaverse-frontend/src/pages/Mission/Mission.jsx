@@ -1,6 +1,10 @@
+import React from "react";
 import "./Mission.css";
+import { useNavigate } from "react-router-dom";
 
 function Mission() {
+  const navigate = useNavigate();
+
   return (
     <div className="mission-page">
 
@@ -12,20 +16,20 @@ function Mission() {
 
         <p>
           The Dark Bugs have corrupted the Java Kingdom.
+          <br />
           Your task is to fix the variables and save the kingdom.
         </p>
 
         <div className="reward">
-
           <h3>Rewards</h3>
-
           <p>⭐ +50 XP</p>
-
           <p>🪙 +20 Coins</p>
-
         </div>
 
-        <button>
+        <button
+          onClick={() => navigate("/quiz")}
+          className="quiz-btn"
+        >
           🚀 Start Quiz
         </button>
 

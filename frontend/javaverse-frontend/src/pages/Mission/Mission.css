@@ -1,111 +1,73 @@
 .mission-page{
-
-min-height:100vh;
-
-background:#0d1117;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
+    min-height:100vh;
+    background:#0b1120;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
 }
 
 .mission-page h1{
-
-color:white;
-
-font-size:45px;
-
-margin-bottom:30px;
-
-text-shadow:0 0 20px cyan;
-
+    font-size:52px;
+    margin-bottom:35px;
+    text-shadow:0 0 15px cyan;
 }
 
 .mission-card{
-
-width:650px;
-
-background:#161b22;
-
-border:2px solid cyan;
-
-border-radius:20px;
-
-padding:35px;
-
-text-align:center;
-
-box-shadow:0 0 20px cyan;
-
+    width:720px;
+    background:#161b22;
+    border:2px solid cyan;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,255,255,.5);
 }
 
 .mission-card h2{
-
-color:#00e5ff;
-
-margin-bottom:20px;
-
+    color:#00e5ff;
+    margin-bottom:25px;
+    font-size:34px;
 }
 
 .mission-card p{
-
-color:white;
-
-font-size:18px;
-
-line-height:30px;
-
+    font-size:22px;
+    line-height:1.8;
+    color:#ddd;
 }
 
 .reward{
-
-margin:30px 0;
-
+    margin-top:35px;
+    margin-bottom:35px;
 }
 
 .reward h3{
-
-color:gold;
-
+    color:gold;
+    margin-bottom:15px;
+    font-size:30px;
 }
 
 .reward p{
-
-color:#7CFC00;
-
-font-size:22px;
-
+    color:#9cff57;
+    font-size:26px;
+    font-weight:bold;
+    margin:8px 0;
 }
 
-.mission-card button{
-
-padding:15px 45px;
-
-font-size:20px;
-
-background:cyan;
-
-border:none;
-
-border-radius:10px;
-
-cursor:pointer;
-
-font-weight:bold;
-
-transition:.3s;
-
+.quiz-btn{
+    padding:16px 45px;
+    border:none;
+    border-radius:12px;
+    background:#00bcd4;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
 }
 
-.mission-card button:hover{
-
-transform:scale(1.05);
-
-box-shadow:0 0 25px cyan;
-
+.quiz-btn:hover{
+    background:#0097a7;
+    transform:scale(1.08);
+    box-shadow:0 0 20px cyan;
 }
