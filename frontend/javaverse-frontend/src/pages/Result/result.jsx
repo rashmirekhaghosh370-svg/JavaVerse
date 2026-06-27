@@ -1,6 +1,8 @@
 import React from "react";
 import "./Result.css";
 import { useNavigate } from "react-router-dom";
+import HUD from "../../components/HUD/HUD";
+
 
 function Result() {
 
@@ -11,6 +13,7 @@ function Result() {
 
   return (
     <div className="result-page">
+        <HUD />
 
       <div className="result-card">
 

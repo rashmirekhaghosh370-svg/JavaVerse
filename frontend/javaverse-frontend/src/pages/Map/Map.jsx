@@ -1,15 +1,16 @@
 import React from "react";
 import "./Map.css";
 import { useNavigate } from "react-router-dom";
+import HUD from "../../components/HUD/HUD";
 
 function Map() {
   const navigate = useNavigate();
-
   const reactUnlocked =
     localStorage.getItem("reactUnlocked") === "true";
 
   return (
     <div className="map-page">
+      <HUD/>
       <h1 className="map-title">🗺️ JavaVerse World Map</h1>
 
       <div className="map-grid">

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Quiz.css";
 import { useNavigate } from "react-router-dom";
+import HUD from "../../components/HUD/HUD";
+
 
 function Quiz() {
 const navigate = useNavigate();
@@ -51,6 +53,7 @@ const handleAnswer = (selected) => {
 return(
 
 <div className="quiz-page">
+    <HUD />
 <h1>📝 Java Quiz</h1>
 
 <div className="quiz-card">

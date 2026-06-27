@@ -1,11 +1,13 @@
 import React from "react";
 import "./JavaKingdom.css";
 import { useNavigate } from "react-router-dom";
+import HUD from "../../components/HUD/HUD";
 
 function JavaKingdom() {
     const navigate = useNavigate();
   return (
     <div className="kingdom-page">
+      <HUD />
 
       <h1 className="kingdom-title">
         🏰 Java Kingdom
