@@ -8,6 +8,7 @@ import Mission from "./pages/Mission/Mission"
 import Quiz from "./pages/Quiz/Quiz"
 import Result from "./pages/Result/Result"
 import ReactCity from "./pages/ReactCity/ReactCity"
+import BattleArena from "./pages/BattleArena/BattleArena"
 function App() {
   return (
     <Routes>
@@ -20,6 +21,7 @@ function App() {
       <Route path="/quiz" element = {<Quiz/>}/>
       <Route path="/result" element = {<Result/>}/>
       <Route path="/react-city" element = {<ReactCity/>}/>
+      <Route path="/ battle-arena " element = {<  BattleArena />}/>
     </Routes>
   );
 }
