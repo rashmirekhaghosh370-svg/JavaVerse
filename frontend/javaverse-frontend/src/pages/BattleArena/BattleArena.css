@@ -166,3 +166,11 @@
         transform:scale(1);
     }
 }
+.winner{
+    color:#00ff66;
+    font-size:32px;
+    text-align:center;
+    margin:20px;
+    font-weight:bold;
+    text-shadow:0 0 20px #00ff66;
+}
