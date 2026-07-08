@@ -21,7 +21,7 @@ function App() {
       <Route path="/quiz" element = {<Quiz/>}/>
       <Route path="/result" element = {<Result/>}/>
       <Route path="/react-city" element = {<ReactCity/>}/>
-      <Route path="/ battle-arena " element = {<  BattleArena />}/>
+      <Route path="/battle-arena" element = {<BattleArena/>}/>
     </Routes>
   );
 }

@@ -1,62 +1,57 @@
+import React from "react";
 import "./BattleArena.css";
+import hero from "../../assets/images/java warrior.png";
+import boss from "../../assets/images/Code Wizard.png";
 
 function BattleArena() {
   return (
     <div className="battle-page">
 
-      <h1 className="battle-title">⚔️ Java Battle Arena</h1>
+      <h1>⚔ Battle Arena</h1>
 
       <div className="battle-container">
 
-        {/* Enemy */}
-        <div className="enemy-box">
-         <h2 className="enemy-title">👹 Java Bug Monster</h2>
+        <div className="fighter">
+          <img
+            src={hero}
+            alt="Player"
+            className="fighter-image"
+          />
+
+          <h2>🧑 Player</h2>
 
           <div className="hp-bar">
-            <div className="enemy-hp"></div>
+            <div className="hp-fill"></div>
           </div>
 
-          <p>HP : 100 / 100</p>
+          <p>HP : 100</p>
         </div>
 
-        <div className="vs">
-          ⚔️
-        </div>
+        <h1 className="vs">VS</h1>
 
-        {/* Hero */}
-        <div className="hero-box">
-          <h2 className="hero-title">🛡️ Java Hero</h2>
+        <div className="fighter">
+
+          <img
+            src={boss}
+            alt="Code Wizard"
+            className="fighter-image"
+          />
+
+          <h2>🤖 Code Wizard</h2>
 
           <div className="hp-bar">
-            <div className="hero-hp"></div>
+            <div className="hp-fill boss"></div>
           </div>
 
-          <p>HP : 100 / 100</p>
+          <p>HP : 100</p>
+
         </div>
 
       </div>
 
-      <div className="question-box">
-
-        <h2>📚 Java Challenge</h2>
-
-        <p>
-          Which keyword is used to create a class in Java?
-        </p>
-
-        <div className="options">
-
-          <button>new</button>
-
-          <button>class</button>
-
-          <button>object</button>
-
-          <button>function</button>
-
-        </div>
-
-      </div>
+      <button className="attack-btn">
+        ⚔ Attack
+      </button>
 
     </div>
   );

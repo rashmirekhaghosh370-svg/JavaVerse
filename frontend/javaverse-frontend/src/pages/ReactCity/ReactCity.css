@@ -43,3 +43,19 @@
     color:gold;
     margin-bottom:10px;
 }
+.battle-btn{
+    margin-top:25px;
+    padding:14px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    color:white;
+    background:linear-gradient(90deg,#ff6b00,#ffb000);
+    transition:0.3s;
+}
+
+.battle-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px orange;
+}
