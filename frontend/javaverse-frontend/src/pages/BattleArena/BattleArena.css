@@ -174,3 +174,1337 @@
     font-weight:bold;
     text-shadow:0 0 20px #00ff66;
 }
+/* =========================================
+   DAY 19 - JAVA QUESTION BATTLE
+========================================= */
+
+.question-box {
+    position: relative;
+    z-index: 10;
+
+    width: 520px;
+    max-width: 85%;
+
+    padding: 25px;
+
+    margin-top: -15px;
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    background: rgba(10, 20, 40, 0.95);
+
+    border: 2px solid #00e5ff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 20px cyan,
+        0 0 40px rgba(0, 229, 255, 0.3);
+
+    animation: questionOpen 0.4s ease;
+}
+
+
+@keyframes questionOpen {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+.question-box h2 {
+
+    color: #00e5ff;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 10px cyan;
+
+}
+
+
+.question-box h3 {
+
+    color: white;
+
+    font-size: 20px;
+
+    margin: 15px 0 20px;
+
+}
+.question-number {
+    color: #8be9fd;
+    font-weight: bold;
+}
+.option-container {
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+    gap: 12px;
+}
+.option-btn {
+    padding: 12px;
+    border: 1px solid #00e5ff;
+    border-radius: 10px;
+    background: #111c33;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.option-btn:hover {
+    background: #00e5ff;
+    color: black;
+    transform: scale(1.04);
+    box-shadow:
+        0 0 15px cyan;
+}
+.option-btn:disabled {
+
+    cursor: not-allowed;
+
+    opacity: 0.7;
+}
+.answer-message {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+/* MOBILE */
+@media (max-width: 600px) {
+    .option-container {
+        grid-template-columns: 1fr;
+    }
+    .question-box {
+        padding: 18px;
+    }
+}
+.battle-ground {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+
+  position: absolute !important;
+  width: 90% !important;
+  height: 70vh !important;
+
+  left: 50% !important;
+  top: 55% !important;
+  bottom: auto !important;
+
+  transform: translate(-50%, -50%) !important;
+}
+
+.battlefield-player,
+.battlefield-enemy {
+  width: 35% !important;
+  height: auto !important;
+  margin: 0 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.battle-character {
+  width: 280px !important;
+  height: 420px !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+}
+
+.battle-center {
+  position: static !important;
+  transform: none !important;
+}
+
+.battle-vs {
+  font-size: 50px !important;
+}
+/* ===== FIX TOP HUD ===== */
+
+.battle-hud {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+
+  z-index: 20;
+}
+
+.hud-player,
+.hud-enemy {
+  width: 280px;
+}
+
+.hud-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.hud-enemy {
+  text-align: right;
+}
+
+.hud-hp-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hud-hp-bar {
+  width: 200px;
+  height: 16px;
+  background: #222;
+  border: 2px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hud-hp-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.player-health {
+  background: #00ff66;
+}
+
+.enemy-health {
+  background: #ff3030;
+}
+
+.hud-hp-number {
+  color: white;
+  font-weight: bold;
+}
+
+
+/* ===== CENTER BATTLE TITLE ===== */
+
+.battle-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  text-align: center;
+  color: white;
+}
+
+.battle-title span {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.battle-title small {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #00e5ff;
+}
+
+
+/* ===== CENTER VS ===== */
+
+.battle-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.battle-vs {
+  font-size: 65px !important;
+  font-weight: bold;
+  color: white;
+
+  text-shadow:
+    0 0 10px cyan,
+    0 0 25px cyan;
+}
+
+
+/* ===== ATTACK BUTTON BOTTOM CENTER ===== */
+
+.battle-controls {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 30;
+}
+
+.battle-control-btn {
+  padding: 16px 45px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  border: 2px solid #00e5ff;
+  border-radius: 10px;
+
+  background: rgba(0, 20, 35, 0.9);
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 15px cyan,
+    inset 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+.battle-control-btn:hover {
+  transform: scale(1.08);
+}
+.battle-controls {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.battle-control-btn {
+  padding: 14px 45px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #00e5ff;
+  border-radius: 10px;
+  background: rgba(0, 20, 35, 0.95);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px cyan;
+}
+/* ===== RESULT SCREEN FIX ===== */
+
+.battle-result {
+  position: fixed;
+  left: 50%;
+  bottom: 35px;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  z-index: 1000;
+}
+
+.battle-result h2 {
+  margin: 0;
+
+  font-size: 26px;
+  color: #00ff66;
+
+  text-shadow:
+    0 0 10px #00ff66,
+    0 0 20px #00ff66;
+}
+
+.restart-control {
+  position: static !important;
+  transform: none !important;
+
+  padding: 13px 35px;
+}
+
+/* Keep VS only in center */
+
+.battle-center {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+
+  transform: translate(-50%, -50%) !important;
+
+  z-index: 5;
+}
+/* =========================================
+   DAY 19 - PLAYER DASH ATTACK ANIMATION
+   ========================================= */
+
+/* Normal player position */
+.battlefield-player {
+    position: relative;
+    z-index: 5;
+}
+
+/* When player attacks */
+.battlefield-player.player-attack {
+    animation: playerDashAttack 0.5s ease-in-out;
+    z-index: 20;
+}
+
+/* PUBG/Game style fast dash attack */
+@keyframes playerDashAttack {
+
+    /* Starting position */
+    0% {
+        transform: translateX(0) scale(1);
+        filter: brightness(1);
+    }
+
+    /* Character prepares to attack */
+    15% {
+        transform: translateX(-20px) scale(0.97);
+    }
+
+    /* Fast dash toward enemy */
+    55% {
+        transform: translateX(380px) scale(1.08);
+        filter:
+            brightness(1.5)
+            drop-shadow(0 0 15px cyan)
+            drop-shadow(0 0 30px #00e5ff);
+    }
+
+    /* Sword hit moment */
+    70% {
+        transform: translateX(400px) scale(1.12);
+        filter:
+            brightness(2)
+            drop-shadow(0 0 25px white)
+            drop-shadow(0 0 45px cyan);
+    }
+
+    /* Return */
+    100% {
+        transform: translateX(0) scale(1);
+        filter: brightness(1);
+    }
+}
+
+
+/* =========================================
+   ENEMY HIT EFFECT
+   ========================================= */
+
+.battlefield-enemy.enemy-hit {
+    animation: enemyDamageHit 0.5s ease-in-out;
+}
+
+@keyframes enemyDamageHit {
+
+    0% {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+
+    20% {
+        transform: translateX(18px);
+        filter: brightness(2);
+    }
+
+    40% {
+        transform: translateX(-18px);
+    }
+
+    60% {
+        transform: translateX(12px);
+        filter:
+            brightness(1.8)
+            drop-shadow(0 0 25px red);
+    }
+
+    80% {
+        transform: translateX(-8px);
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+}
+
+
+/* =========================================
+   PLAYER HIT EFFECT
+   ========================================= */
+
+.battlefield-player.player-hit {
+    animation: playerDamageHit 0.5s ease-in-out;
+}
+
+@keyframes playerDamageHit {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-18px);
+        filter:
+            brightness(2)
+            drop-shadow(0 0 25px red);
+    }
+
+    50% {
+        transform: translateX(18px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+}
+
+
+/* =========================================
+   DAMAGE NUMBER ANIMATION
+   ========================================= */
+
+.battle-damage {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    font-size: 34px;
+    font-weight: bold;
+    color: #ff3131;
+    text-shadow:
+        0 0 10px red,
+        0 0 20px red;
+    z-index: 50;
+    animation: damagePopup 0.5s ease-out;
+}
+@keyframes damagePopup {
+    0% {
+        opacity: 0;
+        transform:
+            translateY(20px)
+            scale(0.5);
+    }
+    40% {
+        opacity: 1;
+        transform:
+            translateY(-10px)
+            scale(1.4);
+    }
+    100% {
+        opacity: 0;
+        transform:
+            translateY(-50px)
+            scale(1);
+    }
+}
+/* =========================================
+   DAY 19 - SWORD SLASH EFFECT
+   ========================================= */
+
+.battlefield-enemy {
+    position: relative;
+}
+
+/* Slash container */
+
+.sword-slash {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    pointer-events: none;
+    animation: slashFlash 0.5s ease-out;
+}
+/* Main slash lines */
+.slash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 190px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    box-shadow:
+        0 0 8px white,
+        0 0 18px cyan,
+        0 0 35px #00e5ff,
+        0 0 55px #00e5ff;
+
+    opacity: 0;
+}
+
+
+/* First sword cut */
+
+.slash-one {
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+    animation:
+        slashOne 0.45s ease-out forwards;
+}
+
+
+/* Second sword cut */
+
+.slash-two {
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-45deg);
+    animation:
+        slashTwo 0.45s
+        0.08s
+        ease-out forwards;
+}
+
+
+/* First slash animation */
+
+@keyframes slashOne {
+
+    0% {
+        opacity: 0;
+        width: 0;
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg)
+            scale(0.3);
+    }
+
+    40% {
+        opacity: 1;
+        width: 200px;
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg)
+            scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        width: 240px;
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg)
+            scale(1.4);
+    }
+}
+/* Second slash animation */
+@keyframes slashTwo {
+
+    0% {
+        opacity: 0;
+        width: 0;
+        transform:
+            translate(-50%, -50%)
+            rotate(-45deg)
+            scale(0.3);
+    }
+
+    40% {
+        opacity: 1;
+        width: 200px;
+        transform:
+            translate(-50%, -50%)
+            rotate(-45deg)
+            scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        width: 240px;
+        transform:
+            translate(-50%, -50%)
+            rotate(-45deg)
+            scale(1.4);
+    }
+}
+/* Bright impact flash */
+
+@keyframes slashFlash {
+    0% {
+        filter: brightness(1);
+    }
+    45% {
+        filter: brightness(2);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+/* =========================================
+   DAY 19 - BATTLE IMPACT EFFECT
+   ========================================= */
+
+
+/* SCREEN SHAKE WHEN ATTACK HITS */
+
+.battle-impact {
+    animation: battleScreenShake 0.35s ease-in-out;
+}
+
+@keyframes battleScreenShake {
+    0% {
+        transform: translate(0, 0);
+    }
+    15% {
+        transform: translate(-7px, 4px);
+    }
+    30% {
+        transform: translate(7px, -4px);
+    }
+    45% {
+        transform: translate(-5px, -3px);
+    }
+    60% {
+        transform: translate(5px, 3px);
+    }
+    75% {
+        transform: translate(-2px, 2px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+/* =========================================
+   BRIGHT HIT FLASH
+   ========================================= */
+
+.impact-flash {
+
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 999;
+    background:
+        radial-gradient(
+            circle at 75% 55%,
+            rgba(255,255,255,0.75) 0%,
+            rgba(0,229,255,0.35) 12%,
+            rgba(0,229,255,0.08) 30%,
+            transparent 55%
+        );
+
+    animation: impactFlashAnimation 0.35s ease-out forwards;
+}
+@keyframes impactFlashAnimation {
+
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0.65;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* =========================================
+   EXTRA ENEMY IMPACT GLOW
+   ========================================= */
+
+.battle-impact .battlefield-enemy {
+
+    filter:
+        brightness(1.6)
+        drop-shadow(0 0 15px white)
+        drop-shadow(0 0 30px #00e5ff);
+
+}
+/* =========================================
+   DAY 19 - PLAYER SWORD ENERGY ATTACK
+========================================= */
+
+
+/* Flying sword attack container */
+
+.sword-projectile {
+  position: absolute;
+
+  left: 27%;
+  top: 48%;
+
+  width: 180px;
+  height: 90px;
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  animation: swordFly 0.7s ease-in forwards;
+}
+
+
+/* Main diagonal sword energy */
+
+.sword-energy-line {
+  position: absolute;
+
+  width: 180px;
+  height: 8px;
+
+  top: 40px;
+  left: 0;
+
+  background: white;
+
+  border-radius: 50%;
+
+  transform: rotate(-18deg);
+
+  box-shadow:
+    0 0 8px white,
+    0 0 18px cyan,
+    0 0 35px cyan,
+    0 0 55px #00ffff;
+
+  animation: swordPulse 0.15s infinite alternate;
+}
+
+
+/* Large glowing trail */
+
+.sword-energy-glow {
+  position: absolute;
+
+  width: 150px;
+  height: 35px;
+
+  top: 27px;
+  left: 10px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(255,255,255,0.9) 0%,
+      rgba(0,255,255,0.5) 30%,
+      rgba(0,180,255,0.15) 60%,
+      transparent 75%
+    );
+
+  transform: rotate(-18deg);
+
+  filter: blur(5px);
+
+  animation: energyGlow 0.2s infinite alternate;
+}
+
+
+/* =========================================
+   FLY PLAYER -> ENEMY
+========================================= */
+
+@keyframes swordFly {
+
+  0% {
+    left: 25%;
+
+    transform:
+      translateX(0)
+      scale(0.4);
+
+    opacity: 0;
+  }
+
+
+  15% {
+    opacity: 1;
+
+    transform:
+      translateX(30px)
+      scale(1);
+  }
+
+
+  60% {
+
+    transform:
+      translateX(320px)
+      scale(1.2);
+  }
+
+
+  100% {
+
+    left: 70%;
+
+    transform:
+      translateX(0)
+      scale(1.5);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* Sword pulse */
+
+@keyframes swordPulse {
+
+  from {
+
+    transform:
+      rotate(-18deg)
+      scaleX(0.9);
+
+  }
+  to {
+    transform:
+      rotate(-18deg)
+      scaleX(1.15);
+  }
+}
+/* Glow breathing */
+
+@keyframes energyGlow {
+
+  from {
+    opacity: 0.6;
+    transform:
+      rotate(-18deg)
+      scale(0.8);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      rotate(-18deg)
+      scale(1.2);
+
+  }
+
+}
+
+
+/* =========================================
+   FLYING SPARKS
+========================================= */
+
+.sword-spark {
+
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 8px cyan,
+    0 0 16px cyan;
+
+}
+
+
+.spark-one {
+
+  top: 15px;
+  left: 50px;
+
+  animation: sparkMove1 0.35s infinite;
+
+}
+
+
+.spark-two {
+
+  top: 65px;
+  left: 100px;
+
+  animation: sparkMove2 0.4s infinite;
+
+}
+
+
+.spark-three {
+
+  top: 25px;
+  left: 140px;
+
+  animation: sparkMove3 0.3s infinite;
+
+}
+
+
+@keyframes sparkMove1 {
+
+  from {
+
+    transform:
+      translate(0,0)
+      scale(1);
+    opacity: 1;
+  }
+  to {
+    transform:
+      translate(-35px,-25px)
+      scale(0);
+
+    opacity: 0;
+  }
+}
+@keyframes sparkMove2 {
+
+  from {
+
+    transform:
+      translate(0,0)
+      scale(1);
+    opacity: 1;
+  }
+  to {
+    transform:
+      translate(-45px,30px)
+      scale(0);
+    opacity: 0;
+  }
+}
+@keyframes sparkMove3 {
+
+  from {
+    transform:
+      translate(0,0)
+      scale(1);
+    opacity: 1;
+
+  }
+
+  to {
+    transform:
+      translate(-30px,-35px)
+      scale(0);
+    opacity: 0;
+  }
+}
+/* =========================================
+   ENEMY HIT IMPACT
+========================================= */
+
+.enemy-hit {
+  animation: enemyHeavyHit 0.45s ease;
+}
+@keyframes enemyHeavyHit {
+
+  0% {
+    transform: translateX(0);
+    filter: brightness(1);
+  }
+  20% {
+
+    transform:
+      translateX(18px)
+      rotate(2deg);
+
+    filter:
+      brightness(2)
+      drop-shadow(0 0 25px cyan);
+  }
+  40% {
+    transform:
+      translateX(-15px)
+      rotate(-2deg);
+  }
+  60% {
+    transform:
+      translateX(10px);
+  }
+  80% {
+    transform:
+      translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+    filter: brightness(1);
+  }
+}
+/* =========================================
+   SCREEN SHAKE WHEN SWORD HITS
+========================================= */
+
+.battle-page.impact {
+
+  animation: battleScreenShake 0.35s ease;
+}
+@keyframes battleScreenShake {
+
+  0% {
+    transform: translate(0,0);
+  }
+  20% {
+    transform: translate(-7px,4px);
+  }
+  40% {
+    transform: translate(7px,-4px);
+  }
+  60% {
+    transform: translate(-5px,3px);
+  }
+  80% {
+    transform: translate(4px,-2px);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+/* =========================================
+   RESPONSIVE SWORD ATTACK
+========================================= */
+
+@media (max-width: 900px) {
+
+  .sword-projectile {
+    width: 120px;
+  }
+  .sword-energy-line {
+    width: 120px;
+  }
+  .sword-energy-glow {
+
+    width: 100px;
+  }
+}
+/* =========================================
+   DAY 19 - STEP 4
+   MAGIC HIT + PLAYER KNOCKBACK
+========================================= */
+
+
+/* =========================================
+   MAGIC IMPACT FLASH ON PLAYER
+========================================= */
+
+.player-magic-flash {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+
+    z-index: 999;
+
+    background:
+        radial-gradient(
+            circle at 25% 55%,
+
+            rgba(255,255,255,0.85) 0%,
+
+            rgba(0,229,255,0.55) 8%,
+
+            rgba(110,70,255,0.35) 18%,
+
+            rgba(0,229,255,0.10) 32%,
+
+            transparent 55%
+        );
+
+    animation:
+        magicImpactFlash
+        0.45s ease-out forwards;
+}
+
+
+@keyframes magicImpactFlash {
+
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* =========================================
+   PLAYER KNOCKBACK
+========================================= */
+.battlefield-player.player-hit {
+    animation:
+        playerKnockback
+        0.45s ease-out;
+}
+@keyframes playerKnockback {
+    0% {
+        transform:
+            translateX(0)
+            rotate(0deg)
+            scale(1);
+        filter:
+            brightness(1);
+    }
+    /* Magic hits player */
+    20% {
+        transform:
+            translateX(-45px)
+            rotate(-4deg)
+            scale(0.96);
+        filter:
+            brightness(2)
+            drop-shadow(0 0 20px cyan)
+            drop-shadow(0 0 35px #704cff);
+    }
+    /* Strong knockback */
+    45% {
+        transform:
+            translateX(-80px)
+            rotate(-7deg)
+            scale(0.94);
+    }
+    /* Recovery */
+    70% {
+        transform:
+            translateX(-30px)
+            rotate(-2deg)
+            scale(0.98);
+    }
+    /* Return */
+    100% {
+        transform:
+            translateX(0)
+            rotate(0deg)
+            scale(1);
+        filter:
+            brightness(1);
+    }
+}
+/* =========================================
+   MAGIC EXPLOSION GLOW AROUND PLAYER
+========================================= */
+
+.player-hit::before {
+
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    transform:translate(-50%, -50%);
+    border-radius: 50%;
+    background:radial-gradient(
+            circle,
+            rgba(255,255,255,0.95) 0%,
+            rgba(0,229,255,0.65) 15%,
+            rgba(112,76,255,0.40) 35%,
+            transparent 70%
+        );
+    box-shadow:
+        0 0 25px cyan,
+        0 0 50px #704cff,
+        0 0 80px
+        rgba(0,229,255,0.6);
+    z-index: 30;
+    pointer-events: none;
+    animation:magicExplosion0.45s ease-out forwards;
+}
+@keyframes magicExplosion {
+    0% {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            scale(0.2);
+    }
+    25% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(1.1);
+    }
+    60% {
+        opacity: 0.8;
+        transform:
+            translate(-50%, -50%)
+            scale(1.6);
+    }
+    100% {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            scale(2);
+    }
+}
+/* =========================================
+   ENERGY RING AFTER MAGIC HIT
+========================================= */
+
+.player-hit::after {
+
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform:
+        translate(-50%, -50%);
+    border:
+        5px solid
+        rgba(0,229,255,0.9);
+    border-radius: 50%;
+    box-shadow:
+        0 0 15px cyan,
+        inset 0 0 15px cyan;
+    z-index: 29;
+    pointer-events: none;
+    animation:
+        magicShockwave
+        0.45s ease-out forwards;
+}
+@keyframes magicShockwave {
+    0% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(0.3);
+    }
+    100% {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            scale(3);
+    }
+}
